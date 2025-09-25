@@ -98,6 +98,36 @@ TABLE SALES_LOGISTICS (
 );
 
 
+TABLE MATERIAL_MANUFACTURING (
+SalesOrder,             -- Sales Order Number
+MG2,                  -- '3PC': 3 piece can, 'END': normal cap or shell cap, 'EOE': easy to open cap, 'POE': quick peel cap, 'EOS': Spoon cap, '2PC': 2 piece can, 'SOT': Stay On Tab
+Material1,          -- Material Number code,
+MaterialDes,       -- Material Description or name of material
+Uom,              -- Unit of Measure code (e.g., 'PCS': Piece, 'BLK': Blank, 'SET': Set, 'ST': Strip, 'SH': Shearline Sheet, 'SHT': Sheet of Color printing coating
+MatGroup1,         -- Material Group, Types of Steel (Note: 'A': Aluminum and 'L': Laminate and 'S': Steel)
+MatGroup3,      -- Material Group 3, Types of Can Size, Lid Size
+MatGroup4,    -- Material Group 4, '1': Color Printing, '2': No Color Printing, '999': Other Jobs, 'OEM': Contract Jobs, 'Z01': Claim Jobs
+PricingUnit,       -- Price per unit. 
+NetPrice        -- Net Price
+);
+
+TABLE WAREHOUSE_STOCK (
+SalesOrder,        -- Sales Order Number
+Sloc,          -- Storage Location
+GoodRecipient,         -- Good Recipient Number
+Batch,        -- Batch Number
+UnrestrictQty,         -- Unrestricted Quantity
+InspQty,         -- Balance waiting for QC Inspection
+BlockQty,         -- Balance stuck in Block
+UnrestrictValue,    -- Balance value in Unrestricted, UR balance value, available balance value
+InspValue,     -- QC inspection balance value, QC check balance value
+BlockValue,   -- Block balance value, unsold balance value
+StockWH,    -- Stock Warehouse
+StockWIP,   -- Stock Work In Progress
+StockHold,      -- Stock on Hold
+StockQI,        -- Stock Quality Inspection
+StockBlock    -- Stock Block
+);
 
 
 Guidelines:
