@@ -1,0 +1,24 @@
+{
+  "agent": "text2sql_stgb",
+  "goals": {
+    "convert_text_to_sql-1": ["summarize"]
+  },
+  "goal_details": [
+    {
+      "type": "tool_call",
+      "name": "convert_text_to_sql-1", 
+      "tool_name": "convert_text_to_sql",
+      "args": {
+        "question": "นักเรียนที่มาจากจังหวัดเชียงใหม่มีกี่คนและแบ่งตามระดับชั้นเรียนอย่างไร"
+      }
+    },
+    {
+      "name": "summarize",
+      "type": "text",
+      "response": "Expected response explaining the results in Thai",
+      "keywords": ["เชียงใหม่", "นักเรียน", "ระดับชั้น"]
+    }
+  ],
+  "story": "นักเรียนที่มาจากจังหวัดเชียงใหม่มีกี่คนและแบ่งตามระดับชั้นเรียนอย่างไร",
+  "starting_sentence": "นักเรียนที่มาจากจังหวัดเชียงใหม่มีกี่คนและแบ่งตามระดับชั้นเรียนอย่างไร"
+}
